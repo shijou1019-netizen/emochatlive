@@ -78,6 +78,13 @@ img { max-width: 100%; height: auto; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
 .note { color: var(--muted); font-size: 14px; }
 
+/* スマホでご覧の方へ（2026-10-27）: 拡張機能は PC の Chrome にしか入れられないので、スマホ・タブレットで来た人にだけ出す。script は使わない */
+.phone-note { display: none; margin: 18px 0 0; padding: 14px 16px; border-radius: var(--radius); background: var(--surface); border: 2px solid var(--accent); }
+.phone-note p { margin: 0 0 10px; font-size: 15px; line-height: 1.7; }
+.phone-note p:last-child { margin-bottom: 0; }
+.phone-note .phone-title { font-weight: 700; color: var(--accent); }
+@media (hover: none) and (pointer: coarse), (max-width: 640px) { .phone-note { display: block; } }
+
 /* セクション */
 section.block { padding: 48px 0; border-top: 1px solid var(--border); }
 section.block h2 { font-size: 26px; margin: 0 0 8px; }
